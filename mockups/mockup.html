@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>D3 Test</title>
+        <script type="text/javascript" src="d3/d3.js"></script>
+    </head>
+    <body>
+        <script type="text/javascript">
+			d3.select("body").append("h1").text("Artemire");
+			d3.select("body").append("img").attr("src","image_not_available.png");
+			var author = function(d) {return "Author: " + "Voltaire"};
+			var genre = function(d) {return "Genre: " + "Tragedy"};
+			var date = function(d) {return "Date: " + "Feb 15 1720"};
+			var acts = function(d) {return "Acts: " + "5"};
+            d3.select("body").append("p").text(author);
+
+			d3.select("body").append("p").text(genre);
+			d3.select("body").append("p").text(date);
+			d3.select("body").append("p").text(acts);
+
+        </script>
+    </body>
+</html> 
