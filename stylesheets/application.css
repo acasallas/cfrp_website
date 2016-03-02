@@ -3643,6 +3643,108 @@ tbody.collapse.in {
 .input-group-btn:last-child > .btn-group {
   margin-left: -1px;
 }
+.containertop{
+  padding-left:20px;
+}
+.topbanner {
+  padding: 100px 50px 0px 50px;
+  margin-bottom: 0;
+  color: white;
+  background: #2e2f41 url(../images/bg-3.jpg) 0 0 no-repeat;
+  background-size: cover;
+  text-align: left;
+}
+.topbanner h1,
+.topbanner .h1 {
+  color: white;
+}
+.topbanner p {
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: 200;
+}
+.topbanner > hr {
+  border-top-color: #d7dbde;
+}
+.container .topbanner {
+  border-radius: 6px;
+}
+.topbanner .container {
+  max-width: 970px;
+}
+@media screen and (min-width: 768px) {
+  .topbanner {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .container .topbanner {
+    padding-left: 10px;
+    padding-right: 0px;
+  }
+  .topbanner h1,
+  .topbanner .h1 {
+    font-size: 44px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 320px) {
+  .topbanner h1,
+  .topbanner .h1 {
+    font-size: 34px;
+  }
+}
+/*
+.topbanner .img-logo {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 250px;
+  height: auto;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+*/
+@media screen and (max-width: 800px) {
+  .topbanner .img-logo {
+    margin-top: 0;
+  }
+}
+.topbanner .img-iPhone {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 320px;
+  height: auto;
+}
+@media screen and (max-width: 800px) {
+  .topbanner .img-iPhone {
+    margin-top: 50px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .topbanner .img-iPhone {
+    width: 250px;
+    height: auto;
+  }
+}
+@media screen and (max-width: 320px) {
+  .topbanner .img-iPhone {
+    width: 220px;
+    height: auto;
+  }
+}
+.topbanner .btn-app-store {
+  margin-top: 40px;
+}
+.topbanner .btn-app-store .btn.btn-lg, .topbanner .btn-app-store .btn-group-lg > .btn {
+  padding: 0;
+}
+.topbanner .btn-app-store .btn img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 180px;
+  height: auto;
+}
 
 .jumbotron {
   padding: 30px 0;
