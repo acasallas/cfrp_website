@@ -34,9 +34,9 @@
 
     <!-- Modernizr Scripts -->
     <script src="javascript/vendor/modernizr-2.7.1.min.js"></script>
+    <script type="text/javascript" src="javascript/d3/d3.js"></script>
   </head>
   <body class="index" id="to-top">
-
     <!-- Side nav -->
     <nav class="side-nav" role="navigation">
 
@@ -91,14 +91,7 @@
       <div class="container">
 
         <div class="row">
-        <h1>About</h1>
-          <div class="col-md-8 col-services">
-            <p style="text-align:left">Welcome to CFRP IMDB! This tool allows you to explore the CFRP database by play, actor, or playhouse.</p>
-
-          </div> <!-- /.col-md-4 -->
-          <div class="col-md-4 col-services">
-            <img src="images/img1.jpg" />
-          </div>
+          <div class="d3container"></div>
           
         </div> <!-- /.row -->
         
@@ -200,5 +193,19 @@
     <script src="javascript/vendor/jquery-2.1.0.min.js"></script>
     <script src="javascript/bootstrap.min.js"></script>
     <script src="javascript/assets/application.js"></script>
+    <script type="text/javascript">
+      d3.select(".d3container").append("h1").text("Artemire");
+      d3.select(".d3container").append("img").attr("src","image_not_available.png");
+      var author = function(d) {return "Author: " + "Voltaire"};
+      var genre = function(d) {return "Genre: " + "Tragedy"};
+      var date = function(d) {return "Date: " + "Feb 15 1720"};
+      var acts = function(d) {return "Acts: " + "5"};
+      d3.select(".d3container").append("p").text(author);
+
+      d3.select(".d3container").append("p").text(genre);
+      d3.select(".d3container").append("p").text(date);
+      d3.select(".d3container").append("p").text(acts);
+
+    </script>
   </body>
 </html>
