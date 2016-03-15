@@ -34,8 +34,50 @@
 
     <!-- Modernizr Scripts -->
     <script src="javascript/vendor/modernizr-2.7.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script type="text/javascript">
+    function $_GET(param) {
+      var vars = {};
+      var currURL=decodeURI(window.location.href);
+      currURL.replace( location.hash, '' ).replace( 
+        /[?&]+([^=&]+)=?([^&]*)?/gi, // regexp
+        function( m, key, value ) { // callback
+          vars[key] = value !== undefined ? value : '';
+        }
+      );
+
+      if ( param ) {
+        return vars[param] ? vars[param] : null;  
+      }
+      return vars;
+    }
+    var genre = $_GET('genre');
+    //alert(genre);
+
+    var url = "http://api.cfregisters.org/plays";
+    var genreList=[];
+    $.getJSON(url, "", success);
+    function success(data) {
+      for (i = 0; i < data.length; i++) { 
+        console.log(data[i].title);
+        if(!genre){
+          if(genreList.indexOf(data[i].genre)<0 && data[i].genre!=null && data[i].genre!=0){
+            genreList.push(data[i].genre);
+            $( ".titles" ).append( "<a href='"+ window.location.href+"?genre="+data[i].genre+"'>"+data[i].genre+"</a>, " );
+          }
+        }
+        else{
+          if(data[i].genre==genre){
+            $( ".titles" ).append( "<a href='play.html?title="+data[i].title+"'>" +data[i].title+"</a><br />" );
+          }
+        }
+      }
+      console.log(genreList);
+    }
+    </script>
   </head>
   <body class="index" id="to-top">
+    <script src="http://d3js.org/d3.v3.min.js"></script>
 
     <!-- Side nav -->
     <nav class="side-nav" role="navigation">
@@ -100,11 +142,18 @@
             <p style="text-align:left">Welcome to CFRP IMDB! This tool allows you to explore the CFRP database by play, actor, or playhouse.</p>
 
           </div> <!-- /.col-md-4 -->
+
           <div class="col-md-4 col-services">
             <img src="images/img1.jpg" />
           </div>
           
         </div> <!-- /.row -->
+        <div class="row">
+          <h1>Browse by Genre</h1>
+          <div class="titles">
+
+          </div>
+        </div>
         
       </div> <!-- /.container -->
       
