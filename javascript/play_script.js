@@ -39,7 +39,6 @@ $(document).ready(function() {
 	$.get("http://api.cfregisters.org/performances_with_totals?title=eq." + title, function (data,status) {
 		
 		if (data.length > 0) {
-			alert("found");
 			for (i = 0; i< data.length; i++) {
 			$("#performancesTable").append("<tr>" +
 				"<td>" + "<a href=\"performance.html?title=" + title + "&date=" +data[i].date + "\">" + data[i].date + "</a>" + "</td>" +
