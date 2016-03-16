@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7 ]> <html class="ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+  <head>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="googlebot" content="index,follow">
+
+    <!-- Title -->
+    <title>CFRP IMDB</title>
+
+    <!-- Templates core CSS -->
+    <link href="stylesheets/application.css" rel="stylesheet">
+
+    <!-- Favicons -->
+    <link href="images/favicon/favicon.png" rel="shortcut icon">
+    <link href="images/favicon/apple-touch-icon-57-precomposed.png" rel="apple-touch-icon">
+    <link href="images/favicon/apple-touch-icon-72-precomposed.png" rel="apple-touch-icon" sizes="72x72">
+    <link href="images/favicon/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon" sizes="114x114">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Modernizr Scripts -->
+    <script src="javascript/vendor/modernizr-2.7.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+    function $_GET(param) {
+      var vars = {};
+      var currURL=decodeURI(window.location.href);
+      currURL.replace( location.hash, '' ).replace( 
+        /[?&]+([^=&]+)=?([^&]*)?/gi, // regexp
+        function( m, key, value ) { // callback
+          vars[key] = value !== undefined ? value : '';
+        }
+      );
+
+      if ( param ) {
+        return vars[param] ? vars[param] : null;  
+      }
+      return vars;
+    }
+    var genre = $_GET('genre');
+    //alert(genre);
+  if(!genre){
+  //list of author names generated using a script to improve performance
+  var author_names = ["Jean-Baptiste Poquelin dit Molière","Laujon","Racine (Jean)","Corneille (Pierre)","Quinault (Philippe)","Corneille (Thomas)","Abeille (Gaspard, abbé)","Rotrou (Jean de) ; Ussé (Louis II Bernin de Valentinay d')","Hauteroche (Noël Lebreton, sieur de)","Riupeirous (Théodore de)","Fontenelle (Bernard le Bouvier de)","Séguineau (Mr) ; Pralard (René)","Legrand (Marc-Antoine)","Chaligny des Plaines (François de)","Gaultier","Poisson (Philippe)","La Chapelle (Jean de)","Campistron (Jean Galbert de)","Voltaire (François-Marie Arouet dit)","La Grange-Chancel (François-Joseph de)","Boyer (Claude, abbé) pseud : Pader d'Assézan","Saint-Gilles Lenfant (de)","Regnard (Jean-François)","Gresset (Jean-Baptiste-Louis)","Barbier (Marie-Anne)","La Fosse (Antoine de)","Pellegrin (Simon-Joseph)","Pacarony (chevalier de)","Aubry (Jean-Baptiste Aubry des Carrières, dit)","Hénault (Charles-Jean-François)","Dancourt (Florent Carton dit)","La Font (Joseph de)","Lesage (Alain-René)","Danchet (Antoine)","Piron (Alexis)","Deschamps (François-Michel-Chrétien)","Morand (Pierre de)","Guyot de Merville (Michel)","Pesselier (Charles-Étienne)","Rosimond (Claude Rose, sieur de)","Scarron (Paul)","Brécourt (Guillaume Marcoureau, sieur de Brécourt, dit)","François-Marie Arouet dit Voltaire","","Abbé Claude-Henri de Fusée de Voisenon ","André Pépin Bellement ","Boissy (Louis de)","Destouches (Philippe Néricault dit)","Brueys (David-Augustin de)","Procope-Couteaux (Michel)","La Tuillerie (Jean-François Juvenon de La Tuillerie, dit)","Gilbert (Gabriel)","Anonyme","Corneille (Thomas) ; Donneau de Vizé (Jean)","Péchantrés (Nicolas de)","Jolly (François-Antoine)","Pradon (Nicolas)","Boyer (Claude, abbé)","Donneau de Vizé (Jean)","Fagan (Barthélemy-Christophe)","Laujon (Pierre)","Gomez (Madeleine-Angélique de)","Nadal (Augustin, abbé)","Du Fresny (Charles)","La Motte (Antoine Houdar de)","La Valette","Voisenon (Claude-Henri de Fusée de)","Genest (Charles-Claude)","unidentified","Molière (Jean-Baptiste Poquelin dit)","Boisrobert (François Le Métel de)","Carcavy (Charles-Alexandre, abbé)","Montfort","Louvet","Belin (François)","Le Noble (Eustache","Le neveu de l'abbé Abeille (Nicolas Abeille dit)","Marivaux (Pierre de)","Audierne (Jacques)","Robbe, Jacques","Champmeslé (Charles Chevillet dit)","Tristan L'Hermite","Subligny (Adrien-Thomas Perdou de)","Gillet de La Tessonerie","Poisson (Raymond)","Montfleury (Antoine Jacob dit)","Marc-Antoine Legrand / Le Grand","Pierre Nicolas Brunet Debaines","Boursault (Edme)","Auvigny (Jean du Castre d')","Avisse (Étienne-François)","Beauregard","Anonyme ","Baron (Michel Boyron dit)","Raisin (Jacques)","Bernard (Catherine)","Rousseau (Jean-Baptiste)","Boindin (Nicolas)","Jean-Baptiste Collet de Messine","Autreau (Jacques)","Montauban (Jacques Pousset de)","Michel Procope-Couteaux ","Florent Carton dit Dancourt","Jean Racine","Jean-François Cailhava d’Estendoux","Fuzelier (Louis)","Aunillon (Pierre-Charles-Fabiot)","Aigueberre (Jean Dumas d')","La Fontaine (Jean de)","Palaprat (Jean de, sieur de Bigot)","Longchamp (Charlotte Legrand, épouse Pitel de)","Brueys (David-Augustin de) ; Palaprat (Jean de)","Roy (Pierre-Charles) ; La Font (Joseph de)","Launay, De","Desforges","La Grange (ou Lagrange, Nicolas [de])","Saint-Glas (Pierre de, abbé de Saint-Ussans)","Desmarets de Saint-Sorlin (Jean)","Pousset de Montauban (Jacques)","Michel Procope-Couteaux","Abbé Claude-Henri de Fusée de Voisenon","Nadal (Augustin)","Boyer (Claude, abbé) ; Le Clerc (Michel)","Châteaubrun (Jean-Baptiste Vivien de)","Brie (de)","Ferrier de la Martinière (Louis)","Le Clerc de La Bruère (Charles-Antoine)","Cahusac (Louis de)","Caux de Montlebert (Gilles de)","La Chaussée (Pierre-Claude)","Tronchin (François)","M. Duis","Voltaire","Sieur Gilles de Caux de Montlebert et M. Charles-Jean-François Hénault dit le Président Hénault","M. François-Guillaume Ducray-Duminil","M. Alexandre-Guillaume Moulier de Moissy","M. Alexandre-Louis-Bertrand Robineau dit Beaunoir","Sauvigny","Longepierre (Hilaire-Bernard de)","Crébillon (Prosper Jolyot de)","Richer (Henri)","Lebrun (Denise)","Abbé François Le Métel de Boisrobert","Sieur Florent Carton dit Dancourt","M. Henri-Alex. Allaire","La Tuillerie (Jean-François Juvenon)","Molière (Jean-Baptiste Poquelin dit) ","Linant (Nicolas-Michel)","Mauger","Baragué","Saurin (Bernard-Joseph)","Dercy (P.)","Portelance (Michel)","Ximénès (Augustin-Louis de)","La Place (Pierre-Antoine de)","Colardeau (Charles-Pierre)","Poinsinet de Sivry (Louis)","Ducis (Jean-François)","Dorat (Claude-Joseph)","Dudoyer de Gastels (Gérard)","Dubuisson (Pierre-Ulric)","Voiron","Doigny du Ponceau","Fallet (Nicolas)","Richerolle d'Avallon","Le Mierre (Antoine-Marin)","Duché de Vancy (Joseph-François)","Laignelot (Joseph François)","Sauvigny (Edme-Louis Billardon de)","Racine (Jean), Moreau (Jean-Baptiste)","Belloy (Pierre Laurent de)","Boistel d'Welles (Jean-Baptiste-Robert ou Robert)","Saint-Foix (Germain-François Poullain de)","Marmontel (Jean-François)","Graffigny (Françoise de)","Renout (Jean-Julien-Constantin)","Collé (Charles)","Maillet-Duclairon (Antoine)","Lefèvre (Pierre-François-Alexandre)","Chénier (Marie-Joseph de)","Boutet de Monvel (Jacques-Marie)","La Harpe (Jean François de)","Riouffé (Honoré)","Fabre d'Églantine (Philippe-François-Nazaire)","Manteufel (Ernest de)","Ségur (Joseph-Alexandre-Pierre de)","Le Franc de Pompignan (Jean-Jacques)","La Fontaine (Jean de) ; Champmeslé (Charles Chevillet, sieur de Champmeslé, dit)","Bret (Antoine)","La Morlière (Jacques Rochette de)","Yon","Colomb de Seillans","Guimond de La Touche (Claude)","Rochon de Chabannes (Marc-Antoine-Jacques)","Marin (François-Louis-Claude)","Barthe (Nicolas-Thomas)","Chamfort (Sébastien-Roch-Nicolas de)","Billardon de Sauvigny (Edme-Louis)","Desfontaines (François-Georges)","Sedaine (Michel-Jean)","Denon (Dominique-Vivant)","Moline (Pierre-Louis)","Montesson (Charlotte-Jeanne Béraud de La Haie de Riou, comtesse de)","Beauharnais (Fanny de)","Dubois-Fontanelle (Joseph-Gaspard)","Imbert (Barthélemy)","Laya (Jean-Louis)","Villemain d'Abancourt (François-Jean)","Genlis (Stéphanie-Félicité du Crest, comtesse de)","Harny de Guerville","Cubières-Palmézeaux (Michel de)","Martel","Rousseau (Pierre de Toulouse)","Moissy (Alexandre-Guillaume de)","Favart (Charles-Simon)","Vigée (Louis-Jean-Baptiste-Étienne)","Falconnet (Françoise-Cécile)","Lebeau de Schosne (Augustin-Théodore-Vincent)","Delorme (Madame, pseudonyme de Marc-Antoine Legrand)","Fournelle (Jean-Nicolas)","Oisemont (d')","Brousse-Desfaucherets (Jean-Louis)","La Montagne (Pierre, baron de)","Forgeot (Nicolas-Julien)","André-Murville (Pierre-Nicolas)","Lesur (Charles-Louis)","Legouvé (Gabriel-Marie)","Lourdet de Santerre (Jean-Baptiste)","Anseaume (Louis) ; Marcouville (Pierre-Augustin Lefèvre de Marcouville dit)","Dampierre de la Salle","Goldoni (Carlo)","Diderot (Denis)","Artaud (Jean-Baptiste)","Dussieux (Louis)","Simon-Chauvot","Lantier (Étienne François de)","Pilhes (Joseph)","Montanclos (Marie-Émilie de)","Vaure (Jacques du) ","Chabanon (Michel Paul Guy de)","Arnaud (François-Thomas-Marie de Baculard d')","Demoustier (Charles-Albert)","Pont-de-Veyle (Antoine de Fériol, comte de)","Palissot de Montenoy (Charles)","Marchadier (Abbé)","Lattaignant de Bainville","Alliot","Cérou (Pierre)","Bastide (Jean-François de)","Lemonnier (Pierre-René)","Molé (François-René)","Beaumarchais (Pierre-Augustin Caron de)","Parisau (Pierre-Germain)","Collot d'Herbois","Aude (Joseph)","Carbon de Flins Des Oliviers (Claude-Marie-Louis-Emmanuel)","Laus de Boissy (Louis de)","Bièvre (François-Georges Maréchal, marquis de)","Simon (Claude-François)","Du Bocage (Anne-Marie)","Landon (Joseph)","Patu (Claude-Pierre) ; Portelance (Michel)","Dancourt (Louis Hurtaut)","Cailhava de L'Estandoux (Jean-François)","Saint-Chamond (Claire-Marie Mazarelli, marquise de)","Bauvin (Jean-Grégoire)","Peyraud de Beaussol","Fenouillot de Falbaire de Quingey (Charles-Georges)","Beaugeard (Jean-Simon Férréol)","Pieyre (Alexandre)","Collin d'Harleville (Jean-François)","Dubois de Rochefort (Guillaume)","Valois d'Orville (Adrien-Joseph de) ; Dubois","Vadé (Jean-Joseph)","Du Roullet (François-Louis Gand Le Bland, bailli)","Devaux (François-Antoine)","Bellecour","Falconnet (Françoise-Cécile) ; Rozet (Madame)","Le Blanc de Guillet (Antoine)","Dorvigny","Gouges (Olympe de)","Robert","Dezède (Nicolas)","Collet de Messine (Jean-Baptiste)","François de Neufchâteau (Nicolas)","Boindin (Nicolas) ; La Motte (Antoine Houdar de)","Rousseau (Jean-Jacques)","Poinsinet (Antoine-Alexandre-Henri)","Dufaut","Thibouville (Henri Lambert d'Herbigny, marquis de)","Longueil (Charles-Henri de)","Lemercier (Népomucène-Louis)","Clément (Jean Marie Bernard)","La Salle (Adrien-Nicolas)","Simonet de Maisonneuve (Louis-Jean-Baptiste)","Ronsin (Charles-Philippe)","Desaudras","Rotrou (Jean de)","Du Ryer (Pierre)","Dupuy","Bret (Antoine) ; Godard d'Aucour (Claude) ; Villaret (Claude)","Grave (Jean Hyacinthe, vicomte de)","Mailhol (Gabriel)","Cordier de Saint-Firmin (Edmond)","Renou (Antoine)","Durosoy (Barnabé Farmian)","Marignié (Jean-Étienne-François)","Claret de Fleurieu (Aglaé Deslacs, comtesse)","Arnault (Antoine Vincent)","Palaprat (Jean de)","Blin de Sainmore (Adrien-Michel-Hyacinthe)","Raucourt (Françoise-Marie-Antoinette-Josèphe Saucerotte dite Mademoiselle)","Grouvelle (Philippe-Antoine)","Mercier (Louis-Sebastien)","Lemercier (Louis-Népomucène)","Picard (Louis-Benoît)","Moncrif (François-Augustin Paradis de)","Grandval (Nicolas Racot de)","Allainval (Léonor-Jean-Christine Soulas d')","La Chazette (de)","Saint-Yon ","L'Affichard (Thomas)","Bernis (François-Joachim de Pierres, cardinal de)","Mauduit-Larive (Jean)","La Chaussée (Pierre-Claude Nivelle de La Chaussée, dit Pierre-Claude)","Leblanc (Jean-Bernard, abbé)","Boizard de Ponteau (Claude-Florimond)","Mauprie (Olivier Hubert Angélique Gourjaut de Mauprie, marquis de)","Le Mascrier (Jean-Baptiste)","Parmentier ","Landois (Paul)","Bonnet de Chemillin (Abbé)","Rousseau (Pierre-Joseph)","L'Affichard (Thomas); Allainval (Léonor-Jean-Christine Soulas d')","Legrand (Marc-Antoine) ; Fuzelier (Louis)","Guérin d'Estriché (Nicolas-Armand-Martial)","Sablier (Charles)","Raisin (Jean-Baptiste)","Desmahis (Joseph-François-Edouard de Corsembleu)","La Noue (Jean-Baptiste Simon Sauvé de La Noue, dit)","Brunet (Pierre-Nicolas)","Lonvay de La Saussaye (Jean-Baptiste)","Gudin de La Brenellerie (Paul-Philippe)","Desforges (Pierre-Jean-Baptiste Choudard)","Dufrénoy (Adélaïde-Gillette Billet)","Crébillon père (Prosper Jolyot de Crébillon dit)","Molière (Jean-Baptiste Poquelin dit) - arrangée et versifiée par Corneille (Thomas)","Morandet","Rowe (Nicholas), auteur / Laplace (Pierre-Antoine de) ou Séran de La Tour (abbé) ou Mauprié (marquis de), traducteur","La Fontaine (Jean de) ; Champmeslé (Charles Chevillet dit)","Desmarres"];
+  author_names.sort();
+  var encodedName="";
+  $(".authorSect").append("<h1 class='title1' style='padding-bottom:15px;'>Browse by Author</h1>");
+  for (i = 0; i < author_names.length; i++) {
+    encodedName = encodeURIComponent(author_names[i]);
+    $(".authors1").append("<a href='author.html?author=" + encodedName + "''>" + author_names[i] + "</a><br />");
+    //alert(author_names[i]);
+  }
+}
+
+    var url = "http://api.cfregisters.org/plays";
+    var genreList=[];
+    $.getJSON(url, "", success);
+    function success(data) {
+      for (i = 0; i < data.length; i++) {
+        console.log(data[i].title);
+        if(!genre){
+          if(genreList.indexOf(data[i].genre)<0 && data[i].genre!=null && data[i].genre!=0){
+            genreList.push(data[i].genre);
+            $( ".titles" ).append( "<a href='"+ window.location.href+"?genre="+data[i].genre+"'>"+data[i].genre+"</a><br />" );
+          }
+        }
+        else{
+          if(data[i].genre==genre){
+            $( ".titles" ).append( "<a href='play.html?title="+data[i].title+"'>" +data[i].title+"</a><br />" );
+            $( ".title1" ).text("Plays in genre: "+data[i].genre);
+          }
+        }
+      }
+      console.log(genreList);
+    }
+    });
+    </script>
+  </head>
+  <body class="index" id="to-top">
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+
+    <!-- Side nav -->
+    <nav class="side-nav" role="navigation">
+
+      <ul class="nav-side-nav">
+        <li><a class="tooltip-side-nav" href="#section-1" title="" data-original-title="Services" data-placement="left"></a></li>
+        <li><a class="tooltip-side-nav" href="#section-2" title="" data-original-title="Features" data-placement="left"></a></li>
+        <li><a class="tooltip-side-nav" href="#section-3" title="" data-original-title="Subscribe" data-placement="left"></a></li>
+        <li><a class="tooltip-side-nav" href="#to-top" title="" data-original-title="Back" data-placement="left"></a></li>
+      </ul>
+      
+    </nav> <!-- /.side-nav -->
+
+
+
+
+    <!-- Jumbotron -->
+    <header class="topbanner" role="banner">
+
+      <div class="containertop">
+
+        <div class="row">
+
+          <div class="col-md-3">
+
+            <!-- Logo -->
+            <figure class="text-center">
+              <a href="./index.html">
+                <!-- <img class="img-logo" src="images/homeimg.jpg" alt="">-->
+              </a>
+            </figure> <!-- /.text-center -->
+
+            <!-- Title -->
+            <h1>CFRP IMDB</h1>
+
+          </div> <!-- /.col-md-7 -->
+          
+        </div> <!-- /.row -->
+        
+      </div> <!-- /.container -->
+
+    </header> <!-- /.jumbotron -->
+
+
+
+
+    <!-- Services -->
+    <section class="services-section" id="section-1">
+      <div class="container">
+        <div style="text-align:right;text-size:14pt;text-weight:bold;"><a href="graphical_tool.html">Graphical Tool</a></div>
+        <div class="row">
+          <h1 class="title1" style="padding-bottom:15px;">Browse by Genre</h1>
+          <div class="titles" style="text-align:left;-webkit-column-count: 4; /* Chrome, Safari, Opera */ -moz-column-count: 3; /* Firefox */ column-count: 3;">
+
+          </div>
+        </div>
+
+        
+      </div> <!-- /.container -->
+      <div class="container">
+
+        <div class="row ">
+          <div class="authorSect">
+          </div>  
+
+          <div class="authors1" style="text-align:left;-webkit-column-count: 4; /* Chrome, Safari, Opera */ -moz-column-count: 3; /* Firefox */ column-count: 3;">
+
+          </div>
+        </div>
+      
+        
+      </div> <!-- /.container -->
+      
+    </section> <!-- /.services-section -->
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="footer-section" role="contentinfo">
+
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-md-4 col-footer">
+            
+            <!-- Footer 1 -->
+            <section>
+              <p>Made by David Mayo and Alan Casallas</p>
+            </section>
+
+            <!-- AddThis Button -->
+            <ul class="addthis_toolbox addthis_default_style">
+
+              <li><a class="addthis_button_facebook_like"></a></li>
+              <li><a class="addthis_button_tweet"></a></li>
+
+            </ul> <!-- /.addthis_toolbox -->
+            <script>var addthis_config = {"data_track_addressbar":true};</script>
+            <script src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-533f6ac03b59c72a"></script>
+
+          </div> <!-- /.col-md-4 -->
+
+          
+        </div> <!-- /.row -->
+
+      </div> <!-- /.container -->
+
+    </footer> <!-- /.footer-section -->
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="javascript/vendor/jquery-2.1.0.min.js"></script>
+    <script src="javascript/bootstrap.min.js"></script>
+    <script src="javascript/assets/application.js"></script>
+  </body>
+</html>
