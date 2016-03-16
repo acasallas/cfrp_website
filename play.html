@@ -15,7 +15,7 @@
     <meta name="googlebot" content="index,follow">
 
     <!-- Title -->
-    <title>CFRP IMDB</title>
+    <title>CFRP - Play</title>
 
     <!-- Templates core CSS -->
     <link href="stylesheets/application.css" rel="stylesheet">
@@ -91,8 +91,29 @@
       <div class="container">
 
         <div class="row">
+          <!--removing what we had, for now...
           <div class="d3container"></div>
-          <img src="images/stars.png" />
+          <img src="images/stars.png" /-->
+        <h1>Play</h1>
+        <h2 id="play_title">Loading Data...</h2>
+        <h3 id="author"></h3>
+        <h3 id="genre"></h3>
+        <h3 id="creation_date"></h3>
+        <h3 id="number_of_acts"></h3>
+        <h3 id="alltime_revenue"></h3>
+
+
+        <div>
+          <h3>Performances</h3>
+          <table id="performancesTable">
+            <tr>
+              <th>Date</th>
+                                <th>Revenue (Livres)</th>
+            </tr>
+          </table>
+        </div>  
+
+
         </div> <!-- /.row -->
         
       </div> <!-- /.container -->
@@ -193,7 +214,9 @@
     <script src="javascript/vendor/jquery-2.1.0.min.js"></script>
     <script src="javascript/bootstrap.min.js"></script>
     <script src="javascript/assets/application.js"></script>
-    <script type="text/javascript">
+    <script src="javascript/play_script.js"></script>
+
+    <!--script type="text/javascript">
       d3.select(".d3container").append("h1").text("Artemire");
       d3.select(".d3container").append("img").attr("src","image_not_available.png");
       var author = function(d) {return "Author: " + "Voltaire"};
@@ -206,6 +229,6 @@
       d3.select(".d3container").append("p").text(date);
       d3.select(".d3container").append("p").text(acts);
 
-    </script>
+    </script-->
   </body>
 </html>
